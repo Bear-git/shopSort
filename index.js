@@ -16,7 +16,7 @@ xhr.onreadystatechange = function(){
         data= JSON.parse(xhr.responseText)
     }
 }
-xhr.send()
+xhr.send();
 console.log(data);
 
 // 3.将数据绑定到页面当中
@@ -45,8 +45,8 @@ for (var i = 0; i < buttons.length; i++) {
     buttons[i].onclick = function(){
         this.index*=-1;
         var value = this.getAttribute('attrName')// hot
-        productSort.call(this,value)
-        changeArrow.call(this)
+        productSort.call(this,value);
+        changeArrow.call(this);
         clearArrow.call(this)
     }
 }
@@ -77,10 +77,10 @@ function changeArrow(){
     if(this.index<0){
         // 根据a标签上的行内自定义属性所对应的属性值变换，判断是否为升序还是降序
         // down.className = 'bg down';
-        down.classList.add('bg')
+        down.classList.add('bg');
         up.classList.remove('bg')
     }else{
-        down.classList.remove('bg')
+        down.classList.remove('bg');
         up.classList.add('bg')
     }
 }
